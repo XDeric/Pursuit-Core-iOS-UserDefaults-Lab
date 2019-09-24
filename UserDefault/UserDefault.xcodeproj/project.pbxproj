@@ -16,6 +16,8 @@
 		857F93B7233A9E1F00FA2334 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857F93B6233A9E1F00FA2334 /* NetworkManager.swift */; };
 		857F93B9233A9E3C00FA2334 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857F93B8233A9E3C00FA2334 /* Error.swift */; };
 		857F93BB233A9E6200FA2334 /* HoroscopeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857F93BA233A9E6200FA2334 /* HoroscopeAPI.swift */; };
+		857F93BD233AA15800FA2334 /* HoroscopeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857F93BC233AA15800FA2334 /* HoroscopeDetailViewController.swift */; };
+		857F93BF233AA31700FA2334 /* HoroscopeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857F93BE233AA31700FA2334 /* HoroscopeRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		857F93B6233A9E1F00FA2334 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		857F93B8233A9E3C00FA2334 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		857F93BA233A9E6200FA2334 /* HoroscopeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPI.swift; sourceTree = "<group>"; };
+		857F93BC233AA15800FA2334 /* HoroscopeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeDetailViewController.swift; sourceTree = "<group>"; };
+		857F93BE233AA31700FA2334 /* HoroscopeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,12 @@
 			isa = PBXGroup;
 			children = (
 				857F9396233A92AD00FA2334 /* AppDelegate.swift */,
-				857F9398233A92AD00FA2334 /* ViewController.swift */,
-				857F93B8233A9E3C00FA2334 /* Error.swift */,
 				857F93B6233A9E1F00FA2334 /* NetworkManager.swift */,
 				857F93BA233A9E6200FA2334 /* HoroscopeAPI.swift */,
+				857F93BE233AA31700FA2334 /* HoroscopeRange.swift */,
+				857F9398233A92AD00FA2334 /* ViewController.swift */,
+				857F93BC233AA15800FA2334 /* HoroscopeDetailViewController.swift */,
+				857F93B8233A9E3C00FA2334 /* Error.swift */,
 				857F939A233A92AD00FA2334 /* Main.storyboard */,
 				857F939D233A92AF00FA2334 /* Assets.xcassets */,
 				857F939F233A92AF00FA2334 /* LaunchScreen.storyboard */,
@@ -210,6 +216,8 @@
 				857F93B7233A9E1F00FA2334 /* NetworkManager.swift in Sources */,
 				857F9399233A92AD00FA2334 /* ViewController.swift in Sources */,
 				857F93BB233A9E6200FA2334 /* HoroscopeAPI.swift in Sources */,
+				857F93BF233AA31700FA2334 /* HoroscopeRange.swift in Sources */,
+				857F93BD233AA15800FA2334 /* HoroscopeDetailViewController.swift in Sources */,
 				857F9397233A92AD00FA2334 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

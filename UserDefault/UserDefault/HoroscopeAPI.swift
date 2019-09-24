@@ -9,9 +9,9 @@
 import Foundation
 
 struct Horoscope: Codable {
-    let sunsign: String
-    let keywords: String
-    let horoscope: String
+    let sunsign: String?
+    let keywords: String?
+    let horoscope: String?
 }
 
 //"http://sandipbgt.com/theastrologer/api/horoscope/gemini/today/"
@@ -21,7 +21,7 @@ class HoroscopeAPIManager {
     
     static let shared = HoroscopeAPIManager()
     
-    func getElement(celestialSpirit: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> Void) {
+    func getHoroscope(celestialSpirit: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> Void) {
         let urlStr = "http://sandipbgt.com/theastrologer/api/horoscope/\(celestialSpirit)/today/"
         guard let url = URL(string: urlStr) else {
             completionHandler(.failure(.badURL))
