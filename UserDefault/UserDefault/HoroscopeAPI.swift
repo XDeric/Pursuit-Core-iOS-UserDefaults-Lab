@@ -9,9 +9,12 @@
 import Foundation
 
 struct Horoscope: Codable {
-    let sunsign: String?
-    let keywords: String?
-    let horoscope: String?
+    let sunsign: String
+    let meta: Stuff
+    let horoscope: String
+}
+struct Stuff: Codable{
+    let keywords: String
 }
 
 //"http://sandipbgt.com/theastrologer/api/horoscope/gemini/today/"

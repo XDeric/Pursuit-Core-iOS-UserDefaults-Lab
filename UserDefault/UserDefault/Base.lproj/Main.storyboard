@@ -84,8 +84,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveBDay:" destination="bCV-gW-c3R" eventType="touchUpInside" id="kIa-oo-wlE"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="FKU-cJ-aPj"/>
+                                    <action selector="savedDay:" destination="bCV-gW-c3R" eventType="touchUpInside" id="NCP-Qy-49F"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="horoscopeSegue" id="FKU-cJ-aPj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-Dg-G9T">

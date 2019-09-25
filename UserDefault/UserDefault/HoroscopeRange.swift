@@ -47,6 +47,6 @@ struct yourHoroscope {
         else if (month == 2 && day >= 19) || (month == 3 && day <= 21){
             return "pisces"
         }
-        else { return "ophiuchus"}
+        else { return "aries"}
     }
 }

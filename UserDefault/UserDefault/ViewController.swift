@@ -10,20 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
-//    let inputDate = datePicker.date
-//    let calendar = Calendar.current
-//    let month = calendar.component(.month, from: inputDate)
-//    let day = calendar.component(.day, from: inputDate)
-//    var fontSize: Double = 17{
-//        didSet{
-//            WelcomeLabel.font = WelcomeLabel.font.withSize(CGFloat(fontSize))
-//            UserDefaults.standard.set(fontSize, forKey: "fontSize")
-//        }
     var inputDate = Date(){
         didSet{
             UserDefaults.standard.set(inputDate, forKey: "inputDate")
         }
     }
+    var horo: Horoscope?
     static var day = Int()
     static var month = Int()
     
@@ -34,7 +26,23 @@ class ViewController: UIViewController {
         ViewController.month = sender.calendar.component(.day, from: inputDate) // the day as an int
     }
     
-    @IBAction func saveBDay(_ sender: UIButton) {
+    @IBAction func savedDay(_ sender: UIButton) {
+        loadData()
+        
+    }
+    
+    private func loadData() {
+        let spirit = yourHoroscope.getCelestialSpirit(month: ViewController.month, day: ViewController.day)
+        HoroscopeAPIManager.shared.getHoroscope(celestialSpirit: spirit) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let horoscopes):
+                    self.horo = horoscopes
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -43,10 +51,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "horoscopeSegue" {
         var vc = segue.destination as! HoroscopeDetailViewController
-        //vc.horoscopeDate = self.month
-        //vc.horoscopeDate = self.day
-        
+        vc.horoscopeDate = horo
+        }
     }
 
 }
